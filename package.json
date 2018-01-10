@@ -1,0 +1,6 @@
+{
+    "name": "uget",
+    "version": "0.0.1",
+    "description": "Downloads a content from web resource, having curl or wget installed in the system",
+    "install": "make install"
+}
