@@ -40,11 +40,6 @@ uget_helper_curl_check_then_download () {
     fi
 }
 
-uget_helper_wget () {
-    wget $1
-    return 0
-}
-
 # main entrance
 uget () {
 
@@ -58,10 +53,10 @@ uget () {
     which wget > /dev/null
     wget_exists=$?
 
-    if [[ $curl_exists = 0 ]]; then
-        uget_helper_curl_check_then_download $1
+    if [[ $wget_exists = 0 ]]; then
+        wget $1
     elif [[ $curl_exists = 0 ]]; then
-        uget_helper_wget $1
+        uget_helper_curl_check_then_download $1
     else
         echo Neither wget or curl utilities are installed in the system. The download can\'t proceed.
         return 1
