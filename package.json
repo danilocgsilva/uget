@@ -2,5 +2,7 @@
     "name": "uget",
     "version": "0.0.1",
     "description": "Downloads a content from web resource, having curl or wget installed in the system",
+    "global": "false",
+    "scripts": [ "uget.sh" ],
     "install": "make install"
 }
