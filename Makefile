@@ -1,6 +1,6 @@
 
 BIN ?= uget
-PREFIX ?== /usr/local
+PREFIX ?= /usr/local
 
 install:
 	cp uget.sh $(PREFIX)/bin/$(BIN)
